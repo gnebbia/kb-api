@@ -11,16 +11,16 @@ kb update api module
 :License: GPLv3 (see /LICENSE).
 """
 
-import shlex
-from subprocess import call
 from typing import Dict
 from pathlib import Path
+
 import kb.db as db
-import kb.initializer as initializer
-import kb.history as history
-import kb.filesystem as fs
 from kb.db import get_artifact_by_id
 from kb.entities.artifact import Artifact
+import kb.filesystem as fs
+import kb.initializer as initializer
+from kb.actions.update import update_artifact
+
 
 # Use the flask make_response function
 from flask import make_response
@@ -73,31 +73,12 @@ def update(args: Dict[str, str], config: Dict[str, str], attachment):
             resp = make_response(({'Error': 'The artifact does not exist'}), 404)
             resp.mimetype = 'application/json'
             return(resp)
-        updated_artifact = Artifact(
-            id=None,
-            title=args.get("title", old_artifact.title),
-            category=args.get("category", old_artifact.category),
-            tags=args.get("tags", old_artifact.tags),
-            author=args.get("author", old_artifact.author),
-            status=args.get("status", old_artifact.status),
-            template=args.get("template", old_artifact.template),
-            path=args.get("category", old_artifact.category) + '/' + args.get("title", old_artifact.title)
-        )
-        db.update_artifact_by_id(conn, old_artifact.id, updated_artifact)
-        # If either title or category has been changed, we must move the file
-        if args["category"] or args["title"]:
-            old_category_path = Path(
-                config["PATH_KB_DATA"],
-                old_artifact.category)
-            new_category_path = Path(
-                config["PATH_KB_DATA"],
-                args["category"] or old_artifact.category)
-            fs.create_directory(new_category_path)
-
-            fs.move_file(Path(old_category_path, old_artifact.title), Path(
-                new_category_path, args["title"] or old_artifact.title))
-        resp = make_response(({'Updated': id}), 200)
-        resp.mimetype = 'application/json'
+            response = update_artifact(old_artifact, args, config, attachment)
+            if resp == -200:
+                resp = make_response(({'Updated': id}), 200)
+                resp.mimetype = 'application/json'
+            else:
+                resp = make_response(({'Error': id + " artifact not updated"}), 400)
+                resp.mimetype = 'application/json'
 
     return(resp)
-    
