@@ -46,16 +46,16 @@ function error {
 }
 
 # DEFINE WHAT PROJECTPYPI IS
-PROJECTPYPI="kb-manager"
-PROJECTGH="kb"
-PROJECT="kb"
+PROJECTPYPI="kb-api"
+PROJECTGH="kb-api"
+PROJECT="kb-api"
 function cleanup {
     rm -rf $PROJECTPYPI.egg-info build || true
     rm -rf **/__pycache__ || true
 }
 
 
-status '*** gnebbia Release Script'
+status '*** Release Script'
 
 echo -n "Version number: "
 read version

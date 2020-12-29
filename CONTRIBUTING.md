@@ -1,7 +1,7 @@
 # CONTRIBUTING
 
-:Info: These are the contribution rules for kb.
-:Copyright: 2012-2020, Giuseppe Nebbione
+:Info: These are the contribution rules for kb-api.
+:Copyright: 2012-2020, Andrew Shapton.
 :License: GPLv3
 
 Do you want to contribute to this project?  Great!  I’d love to see some help,

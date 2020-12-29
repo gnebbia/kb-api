@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-class Kb < Formula
+class Kb-API < Formula
   include Language::Python::Virtualenv
 
-  desc "Minimalist knowledge base manager"
-  homepage "https://github.com/gnebbia/kb"
-  url "https://github.com/gnebbia/kb.git",
-    tag:      "v0.1.5",
+  desc "A REST API for kb - the minimalist knowledge manager"
+  homepage "https://github.com/alshapton/kb-api"
+  url "https://github.com/alshapton/kb-api.git",
+    tag:      "v0.1.0",
     revision: "7abc8f7d816ca80a7c5ef1aacd0fe20c2c1f12cf"
   license "GPL-3.0-or-later"
 
@@ -20,11 +20,6 @@ class Kb < Formula
   resource "attrs" do
     url "https://files.pythonhosted.org/packages/81/d0/641b698d05f0eaea4df4f9cebaff573d7a5276228ef6b7541240fe02f3ad/attrs-20.2.0.tar.gz"
     sha256 "26b54ddbbb9ee1d34d5d3668dd37d6cf74990ab23c828c2888dccdceee395594"
-  end
-
-  resource "colored" do
-    url "https://files.pythonhosted.org/packages/b2/16/04827e24c14266d9161bd86bad50069fea453fa006c3d2b31da39251184a/colored-1.4.2.tar.gz"
-    sha256 "056fac09d9e39b34296e7618897ed1b8c274f98423770c2980d829fd670955ed"
   end
 
   resource "toml" do

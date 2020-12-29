@@ -3,7 +3,7 @@
 FROM python:alpine3.8
 
 LABEL maintainer="alshapton@gmail.com"
-LABEL version="0.1.5"
+LABEL version="0.1.0"
 
 RUN apk update && \
     apk add nano vim && \

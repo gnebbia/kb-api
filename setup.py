@@ -4,14 +4,14 @@ import io
 from setuptools import setup, find_packages
 
 
-setup(name='kb-manager',
-      version='0.1.5',
-      description='A minimalist knowledge base manager',
-      keywords='kb',
-      author='gnc',
-      author_email='nebbionegiuseppe@gmail.com',
-      url='https://github.com/gnebbia/kb',
-      download_url='https://github.com/gnebbia/kb/archive/v0.1.5.tar.gz',
+setup(name='kb-api',
+      version='0.1.0',
+      description='A REST API for kb - the minimalist knowledge manager',
+      keywords='kb-api',
+      author='alshaptono',
+      author_email='alshapton@gmail.com',
+      url='https://github.com/alshapton/kb-api',
+      #download_url='https://github.com/gnebbia/kb/archive/v0.1.5.tar.gz',
       license='GPLv3',
       long_description=io.open(
           './docs/README.md', 'r', encoding='utf-8').read(),
@@ -24,15 +24,16 @@ setup(name='kb-manager',
                     'Programming Language :: Python :: 3.6',
                     'Programming Language :: Python :: 3.7',
                     'Programming Language :: Python :: 3.8',
+                    'Programming Language :: Python :: 3.9',
                     'Operating System :: OS Independent',
                    ], 
       packages=find_packages(exclude=('tests',)),
       include_package_data=True,
-      install_requires=["colored","toml","attr","attrs","flask","flask-httpauth","MarkupSafe"],
+      install_requires=["kb-manager","toml","attr","attrs","flask","flask-httpauth","MarkupSafe"],
       python_requires='>=3.6',
-      entry_points={
-           'console_scripts':[
-               'kb = kb.main:main',
-           ]
-      },
+      #entry_points={
+      #     'console_scripts':[
+      #         'kb = kb.main:main',
+      #     ]
+      #},
       )

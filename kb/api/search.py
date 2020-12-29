@@ -1,14 +1,13 @@
 # -*- encoding: utf-8 -*-
-# kb v0.1.3
-# A knowledge base organizer
-# Copyright © 2020, gnc.
+# kb-api v0.1.0
+# A REST API for kb - the minimalist knowledge base organizer
+# Copyright © 2020, alshapton.
 # See /LICENSE for licensing information.
 
-
 """
-kb search command module
+kb-api search api module
 
-:Copyright: © 2020, gnc.
+:Copyright: © 2020, alshapton.
 :License: GPLv3 (see /LICENSE).
 """
 
