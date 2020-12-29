@@ -29,6 +29,6 @@ setup(name='kb-api',
                    ], 
       packages=find_packages(exclude=('tests',)),
       include_package_data=True,
-      install_requires=["kb-manager>=1.5","toml","attr","attrs","flask","flask-httpauth","MarkupSafe"],
+      install_requires=["kb-manager>=0.1.5","toml","attr","attrs","flask","flask-httpauth","MarkupSafe"],
       python_requires='>=3.6',
       )
