@@ -29,11 +29,6 @@ setup(name='kb-api',
                    ], 
       packages=find_packages(exclude=('tests',)),
       include_package_data=True,
-      install_requires=["kb-manager","toml","attr","attrs","flask","flask-httpauth","MarkupSafe"],
+      install_requires=["kb-manager>=1.6","toml","attr","attrs","flask","flask-httpauth","MarkupSafe"],
       python_requires='>=3.6',
-      #entry_points={
-      #     'console_scripts':[
-      #         'kb = kb.main:main',
-      #     ]
-      #},
       )
