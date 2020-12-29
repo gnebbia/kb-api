@@ -22,28 +22,28 @@ from flask_httpauth import HTTPBasicAuth
 from werkzeug.routing import BaseConverter
 
 # Import the API functions
-from kb.api.add import add
-from kb.api.base import base as base_list
-from kb.api.base import get_current, switch, make_new_base,delete_a_base,rename
-from kb.api.list import list_cats, list_all_tags
-from kb.api.erase import erase
-from kb.api.delete import delete, delete_list_of_items_by_ID
-from kb.api.export import export
-from kb.api.grep import grep
-from kb.api.ingest import ingest
-from kb.api.search import search
-from kb.api.stats import stats
-from kb.api.template import search as search_templates
-from kb.api.template import add as add_template
-from kb.api.template import new as new_template
-from kb.api.template import delete as delete_template
-from kb.api.template import apply_on_set as apply_template
-from kb.api.template import get_template, update_template
-from kb.api.update import update
-from kb.api.view import view_by_id, view_by_title, view_by_name
+from kbapi.api.add import add
+from kbapi.api.base import base as base_list
+from kbapi.api.base import get_current, switch, make_new_base,delete_a_base,rename
+from kbapi.api.list import list_cats, list_all_tags
+from kbapi.api.erase import erase
+from kbapi.api.delete import delete, delete_list_of_items_by_ID
+from kbapi.api.export import export
+from kbapi.api.grep import grep
+from kbapi.api.ingest import ingest
+from kbapi.api.search import search
+from kbapi.api.stats import stats
+from kbapi.api.template import search as search_templates
+from kbapi.api.template import add as add_template
+from kbapi.api.template import new as new_template
+from kbapi.api.template import delete as delete_template
+from kbapi.api.template import apply_on_set as apply_template
+from kbapi.api.template import get_template, update_template
+from kbapi.api.update import update
+from kbapi.api.view import view_by_id, view_by_title, view_by_name
 
 # Import supporting functions
-from kb.api.constants import MIME_TYPE
+from kbapi.api.constants import MIME_TYPE
 from kb import db
 from kb import __version__
 
