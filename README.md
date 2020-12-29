@@ -9,7 +9,7 @@
 
 ## What is the kbAPI Server ?
 
-The kbAPI server is a component of the kb project which exposes the knowledge base as a REST API.
+The kbAPI server is an extension of the [kb project](https://github.com/gnebbia/kb) which exposes the knowledge base as a REST API.
 
 It does this by wrapping the core functionality of kb using the [Flask framework](https://flask.palletsprojects.com/en/1.1.x/)
 
