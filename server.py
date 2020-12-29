@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
-# kb v0.1.3
+# kb v0.1.0
 # A knowledge base organizer
-# Copyright © 2020, gnc.
+# Copyright © 2020, alshapton.
 # See /LICENSE for licensing information.
 
 """
