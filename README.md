@@ -1,11 +1,11 @@
 <p align="center">
-    <img src="img/kbAPILogo.png?raw=true" width="200"/>
+    <img src="./img/kbAPIlogo.png?raw=true" width="200"/>
 </p>
 
 # kbAPI Server
 
 
-> **This document refers to the Alpha  deployment of the kbAPI  server which  is NOT complete and should NOT be used in production environments.**
+> **This information refers to the initial deployment of the kbAPI server which is NOT complete and should NOT be used in production environments.**
 
 ## What is the kbAPI Server ?
 
