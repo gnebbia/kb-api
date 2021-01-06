@@ -1,7 +1,9 @@
 kb-manager
 attr==0.3.1
-attrs
+attrs==20.3.0
 toml
 flask
+flask-httpauth==4.2.0
+MarkupSafeMarkupSafe==1.1.1
 flask-httpauth
-MarkupSafe
+MarkupSafe==1.1.1
