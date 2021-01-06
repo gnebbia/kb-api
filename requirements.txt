@@ -4,4 +4,6 @@ attrs
 toml
 flask
 flask-httpauth==4.2.0
-MarkupSafe
+MarkupSafeMarkupSafe==1.1.1
+flask-httpauth
+MarkupSafe==1.1.1
