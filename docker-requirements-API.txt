@@ -1,6 +1,6 @@
 attr
 attrs
-toml
+toml==0.10.2
 flask
 flask-httpauth
 MarkupSafe
